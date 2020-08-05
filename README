@@ -1,0 +1,6 @@
+save money from aliyun using the following method:
+1) stop the ecs some time (eg: 1 hour) after no user is on
+2) update domain A address when ecs is up with its public IP
+
+3) if you build it with name: alim:1, then you can start it with the folloing cmd
+docker run -itd --restart=always -e ALIYUN_ACCESSKEYID=XXX -e ALIYUN_ACCESSSECRET=XXX -e ALIYUN_REGIONID=cn-shanghai -e INSTANCE_NAME=XXX -e SUBDOMAIN=XXX -e MAINDOMAIN=XXX.com -e MAX_IDLE_TIME=1800 -e TZ=Asia/Shanghai -e SSH_USER=XXX -v /home/XXX/.ssh/id_rsa:/root/.ssh/id_rsa --name=alim  alim:1
